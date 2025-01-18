@@ -1,3 +1,4 @@
+import { borderBottom } from '@mui/system';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -7,28 +8,10 @@ const Navbar = () => {
     return (
         <nav style={styles.navbar}>
             <div style={styles.container}>
-                <ul style={styles.navLinks}>
-                    <li>
-                        <NavLink
-                            to="/"
-                            style={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
-                        >
-                            Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/about"
-                            style={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
-                        >
-                            About
-                        </NavLink>
-                    </li>
-                </ul>
                 <div style={styles.navBrand}>
-                    <NavLink to="/" style={styles.link}>
+                    <NavLink to="/">
                         <img
-                            src="/files/mobile-logo.png" // Updated path to your logo
+                            src="/files/mobile-logo.png" // Update the path to your logo
                             alt="Logo"
                             style={{
                                 ...styles.logo,
@@ -41,18 +24,22 @@ const Navbar = () => {
                 </div>
                 <ul style={styles.navLinks}>
                     <li>
-                        <NavLink
-                            to="/services"
-                            style={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
-                        >
+                        <NavLink to="/" style={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/about" style={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
+                            About
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/services" style={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
                             Services
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink
-                            to="/appointments"
-                            style={({ isActive }) => (isActive ? styles.activeLink : styles.link)}
-                        >
+                        <NavLink to="/appointments" style={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
                             Appointments
                         </NavLink>
                     </li>
@@ -64,12 +51,13 @@ const Navbar = () => {
 
 const styles = {
     navbar: {
-        width: '100%',
+        width: 'width',
         backgroundColor: '#d7d7d7', // Light grey background
         padding: '10px 0', // Padding on top and bottom
+        borderBottom: '1px solid #b3bfb6', // Light green border
     },
     container: {
-        maxWidth: '1200px', // Or any maximum width you prefer
+        maxWidth: 'width', // Or any maximum width you prefer
         margin: '0 auto', // Center the container
         display: 'flex',
         justifyContent: 'space-between',
@@ -77,10 +65,8 @@ const styles = {
         padding: '0 20px', // Padding on the sides
     },
     navBrand: {
-        fontSize: '1.5rem',
-        fontWeight: 'bold',
-        color: '#415256', // Dark grey text color
-        fontFamily: "'Roboto', sans-serif", // Apply Roboto font
+        display: 'flex',
+        alignItems: 'center',
     },
     navLinks: {
         listStyleType: 'none',
@@ -106,11 +92,6 @@ const styles = {
         padding: '8px 12px',
         borderRadius: '5px',
         fontWeight: 'bold',
-        fontFamily: "'Roboto', sans-serif", // Apply Roboto font
-    },
-    linkHover: {
-        backgroundColor: '#b3bfb6', // Light green-grey background color on hover
-        color: '#ffffff', // White text color on hover
         fontFamily: "'Roboto', sans-serif", // Apply Roboto font
     },
     logo: {
