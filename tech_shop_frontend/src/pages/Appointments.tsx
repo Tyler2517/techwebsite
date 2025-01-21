@@ -1,10 +1,4 @@
-import { useEffect } from 'react';
-import { gapi } from 'gapi-script';
-
-const CLIENT_ID = '78396367532-1m0srttijt820loit3l89hoarivh4va7.apps.googleusercontent.com';
-const API_KEY = 'AIzaSyDQxc3Na95kq2UItGlNL84EiRL3iIohwQ4'; // Replace with the actual API key from your Google Cloud project
-const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
-const SCOPES = "https://www.googleapis.com/auth/calendar.events";
+import React from 'react';
 
 const Appointments = () => {
     return (
