@@ -1,47 +1,35 @@
 # Python
-__pycache__/
 *.pyc
 *.pyo
-.env
+__pycache__/
+*.log
+*.sqlite3
 
-# Virtual environments
+# Virtual Environment
 env/
 venv/
 
 # Django
-*.sqlite3
 db.sqlite3
-staticfiles/
-media/
+/static/
+/media/
 
-# VS Code
-.vscode/
+# Django Migrations
+*/migrations/__pycache__/
+*/migrations/*.pyc
 
-# Docker Compose
-docker-compose.yml
-
-# Logs
-logs
-*.log
+# Node.js (Vite React Frontend)
+node_modules/
+dist/
+.vite/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Logs and Temporary Files
+*.log
+*.tmp
+*.lock
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
+Thumbs.db
+.vscode/
