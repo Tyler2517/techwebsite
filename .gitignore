@@ -33,20 +33,3 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 .vscode/
-
-# IDEs and Editors
-.idea/
-*.iml
-*.swp
-*.swo
-*.bak
-
-# Environment Files
-.env
-.env.local
-.env.development
-.env.production
-
-# System Files
-*.~undo-tree
-*.orig
